@@ -3,10 +3,15 @@
     <div class="container">
       <h1>TO DO LIST</h1>
       <input class="input" v-model="newTask"/>
+      <select class="importance" v-model="taskImportance">
+        <option value="MI">Muy importante</option> 
+        <option value="I">Importante</option>
+        <option value="NI">No tan importante</option>
+      </select>
       <button class="add-button" v-on:click="add()">Add</button>
       <ul>
         <li v-for="(tasks,i) in existingTasks">
-          <span>
+          <span class="important">
             {{i+1}}: {{tasks.text}}
           </span>
           <button class="task-button" @click="deleteTask(i)">X</button>
@@ -16,7 +21,7 @@
       <h1>DONE</h1>
       <ul>
         <li v-for="task in completedTask">
-          <span>
+          <span class="completedTask">
             {{task.text}}
           </span>
         </li>  
@@ -31,17 +36,18 @@ export default {
   data () {
     return {
     newTask: '',
+    taskImportance:'',
     existingTasks:[
-    {text: 'Ir al gimnasio', id:0},
-    {text: 'Preparar el final ', id:1},
-    {text: 'Terminar el ejercicio de programacion', id:2}
+    {text: 'Ir al gimnasio', id:0, importance:'MI'},
+    {text: 'Preparar el final ', id:1, importance:'I'},
+    {text: 'Terminar el ejercicio de programacion', id:2, importance:'NI'}
     ],
     completedTask:[]
     }
   },
   methods:{
    add(){
-    this.existingTasks.push({text: this.newTask, id: new Date().valueOf()}),
+    this.existingTasks.push({text: this.newTask, id: new Date().valueOf(), importance: this.taskImportance}),
     this.newTask = ''
    },
    deleteTask(i){
@@ -56,5 +62,17 @@ export default {
 </script>
 
 <style>
-
+  .completedTask{
+    text-decoration: line-through;
+    color:green;
+  }
+  .veryImportant{
+    color: red;
+  }
+  .important{
+    color:orange;
+  }
+  .notImportant{
+    color: greenyellow;
+  }
 </style>
