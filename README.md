@@ -1,18 +1,22 @@
-# todoapp
+# TODOAPP
 
-> A Vue.js project
+> Una aplicaccion simple para la organizacion de tareas diarias(TO-DO list), utilizando vue.js y node.js
 
-## Build Setup
+## USO
+
+> La aplicacion es secilla de usar, se puede agregar una tarea a la lista(apretando enter, o haciendo click en el boton +), se la puede modificar(haciendo doble click en la tarea), se la puede marcar como terminda(haciendo click en el boton de check), y se la puede borrar(haciendo click en el boton rojo).
+
+
+### GUIA DE INSTALACION
 
 ``` bash
-# install dependencies
-npm install
+# Tener instalado node.js(+v12.18.4) y npm(+6.14.16)
+# instalar las dependencias(package.json)
+  npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# Correr el servidor, localhost:8080
+  npm run dev
 
-# build for production with minification
-npm run build
-```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
