@@ -6,6 +6,7 @@
 
 > La aplicacion es secilla de usar, se puede agregar una tarea a la lista(apretando enter, o haciendo click en el boton +), se la puede modificar(haciendo doble click en la tarea), se la puede marcar como terminda(haciendo click en el boton de check), y se la puede borrar(haciendo click en el boton rojo).
 
+##### Puedes probar la aplicacion en el siguiente [Link](https://todoapp-vue-js.netlify.app/ "Link")
 
 ### GUIA DE INSTALACION
 
